@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "remainpoints",
+  "info": {
+    "singularName": "remainpoint",
+    "pluralName": "remainpoints",
+    "displayName": "remainpoint"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "points": {
+      "type": "integer"
+    }
+  }
+}

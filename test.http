@@ -1,0 +1,4 @@
+@url=https://msg.credot-web.com
+
+#####
+GET {{url}}/admin
