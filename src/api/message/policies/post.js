@@ -10,7 +10,7 @@ module.exports = async (policyContext, config, { strapi }) => {
     return false;
   }
 
-  if (dayjs().isAfter(dayjs.unix(timestamp).add(5, 'm'))) {
+  if (dayjs().isAfter(dayjs.unix(timestamp).add(10, 'm'))) {
     return false;
   }
 

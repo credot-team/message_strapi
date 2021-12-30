@@ -1,25 +1,19 @@
-const char = '0123456789abcdefghijklmnopqrstuvwxyz'
+const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+const charactersLength = characters.length;
 
-function getRandom(x){
-    return Math.floor(Math.random()*x);
+const GetRandomString = (length) => {
+  let result = '';
+
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
 };
 
-function getSecret(){
-    let temp = ''
-    for (let i = 0; i < 30; i++) {
-        temp+=char[getRandom(36)]
-        
-    }
-    return temp
-}
-
 module.exports = {
-    beforeCreate(event) {
-      if (!event.params.data.secret) {
-        event.params.data.secret=getSecret()
-      }
-    },
-  };
-
-  
-
+  beforeCreate(event) {
+    if (!event.params.data.secret) {
+      event.params.data.secret = GetRandomString(30);
+    }
+  },
+};

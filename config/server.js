@@ -3,6 +3,6 @@ module.exports = ({ env }) => ({
   port: env.int('PORT', 1337),
   // host: 'msg.credot-web.com',
   // port: 1337,
-  url:'https://msg.credot-web.com',
+  url: env('URL', ''),
   // proxy: env.bool('IS_PROXIED', true),
 });
