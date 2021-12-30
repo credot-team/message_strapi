@@ -10,16 +10,24 @@ module.exports = async (policyContext, config, { strapi }) => {
     return false;
   }
 
-  if (dayjs().isAfter(dayjs.unix(timestamp).add(10, 'm'))) {
+  if (dayjs().isAfter(dayjs.unix(timestamp).add(+process.env.EXPIRED_TIME, 'm'))) {
     return false;
   }
 
-  const temp = await strapi.db.query('api::service.service').findOne({ where: { name: service } });
+  const temp = await strapi.db
+    .query('api::service.service')
+    .findOne({ where: { name: service, enabled: true } });
+
+  if (!temp) {
+    return false;
+  }
 
   const hash = crypto
     .createHash('sha256')
     .update(`${service}${phone}${content}${timestamp}${temp.secret}`)
     .digest('hex');
+
+  return hash === checksum;
 
   if (hash === checksum) {
     req.body.data.service = temp.id;

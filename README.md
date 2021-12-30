@@ -34,7 +34,7 @@ https://message.credot-web.com
   
    |            欄位名稱            |                             說明                             | 預設 |
    | :----------------------------: | :----------------------------------------------------------: | :--: |
-   | filters\[service]\[name]\[$eq] |                           服務名稱                           |      |
+   | filters\[service]\[$eq] |                           服務名稱                           |      |
    |           timestamp            |                       十位數timestamp                        |      |
    |            Checksum            |     驗證用: sha256(${service}${timestamp}${temp.secret})     |      |
    |        pagination[page]        |                      page number, 選填                       |  1   |

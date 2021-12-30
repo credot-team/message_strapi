@@ -1,5 +1,6 @@
 #############
 @url2=http://localhost:1337
+# @url2=https://messagetest.caprover.credot-web.com
 
 #############
 GET {{url2}}/api/services
@@ -24,11 +25,11 @@ Content-Type: application/json
 
 {
     "data":{
-        "phone":"09123456789",
-        "content":"111",
+        "phone":"0921771865",
+        "content":"test message",
         "service":"peman",
-        "timestamp":"1640852020",
-        "checksum":"aa39a596c2ecc6be790cfda0549c416cd3bd983165df9ed2323ea99433860e39"
+        "timestamp":"1640858017",
+        "checksum":"b8796af0a8b9c074aa5dfeab273148bc3b9af4dbb21597203d75103865481a35"
     }
 }
 
@@ -36,5 +37,5 @@ Content-Type: application/json
 GET {{url2}}/api/messages
 Content-Type: application/json
 #############
-GET {{url2}}/api/messages?filters[service][name][$eq]=peman&checksum=45e56e7c8b9c71ae531e90ca74d5fc898740ce65bca034f5dd5832e62fd8049e4&timestamp=1640661128&pagination[page]=1&pagination[pageSize]=5&filters[createdAt][$gt]=2021-12-30T08:14:29.565Z
+GET {{url2}}/api/messages?filters[service][$eq]=peman&checksum=45e56e7c8b9c71e531e90ca74d5fc898740ce65bca034f5dd5832e62fd8049e4&timestamp=1640661128&pagination[page]=1&pagination[pageSize]=5&filters[createdAt][$gt]=2021-12-30T08:14:29.565Z
 Content-Type: application/json

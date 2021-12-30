@@ -25,15 +25,9 @@
       "required": false,
       "private": true
     },
-    "enable": {
+    "enabled": {
       "type": "boolean",
-      "default": false
-    },
-    "messages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::message.message",
-      "mappedBy": "service"
+      "default": true
     }
   }
 }
