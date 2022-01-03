@@ -3,7 +3,7 @@
 - domain
 
 ```
-https://message.credot-web.com
+https://message.production.credot-web.com
 ```
 
 ## 發送簡訊

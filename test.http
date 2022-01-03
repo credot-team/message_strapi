@@ -28,8 +28,8 @@ Content-Type: application/json
         "phone":"0921771865",
         "content":"test message",
         "service":"peman",
-        "timestamp":"1640858017",
-        "checksum":"b8796af0a8b9c074aa5dfeab273148bc3b9af4dbb21597203d75103865481a35"
+        "timestamp":"1641204444",
+        "checksum":"6b67e6407ae3ed5df1b351b81aca7bfcdde16162fece7f68f8ea77e2ef575086"
     }
 }
 
@@ -37,5 +37,5 @@ Content-Type: application/json
 GET {{url2}}/api/messages
 Content-Type: application/json
 #############
-GET {{url2}}/api/messages?filters[service][$eq]=peman&checksum=45e56e7c8b9c71e531e90ca74d5fc898740ce65bca034f5dd5832e62fd8049e4&timestamp=1640661128&pagination[page]=1&pagination[pageSize]=5&filters[createdAt][$gt]=2021-12-30T08:14:29.565Z
+GET {{url2}}/api/messages?filters[service][$eq]=peman&checksum=299439a4482e126ba55303805b133367b6a9a2d910af18c7a81200b7df73adcc&timestamp=1641204143&pagination[page]=1&pagination[pageSize]=5&filters[createdAt][$gt]=2021-12-30T08:14:29.565Z
 Content-Type: application/json
