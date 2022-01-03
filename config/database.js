@@ -4,11 +4,11 @@ module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
     connection: {
-      host: 'containers-us-west-19.railway.app',
-      port: 7153,
-      database: 'railway',
-      user: 'postgres',
-      password: 'rrnNNKFygvD3Zs5YGYfL',
+      host: env('DB_HOST'),
+      port: env('DB_PORT'),
+      database: env('DB_NAME'),
+      user: env('DB_USER'),
+      password: env('DB_PASSWORD'),
       schema: env('DATABASE_SCHEMA', 'public'), // Not required
       ssl: {
         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false), // For self-signed certificates

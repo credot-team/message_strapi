@@ -1,7 +1,7 @@
 #############
-@url2=http://localhost:1337
+# @url2=http://localhost:1337
 # @url2=https://messagetest.caprover.credot-web.com
-
+@url2=https://message.production.credot-web.com
 #############
 GET {{url2}}/api/services
 
